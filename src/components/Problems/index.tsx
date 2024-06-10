@@ -11,7 +11,7 @@ const index = () => {
         justifyContent='center'
         bg='#F6F6F6'
     >
-        <Stack spacing='60px'>
+        <Stack spacing='60px' p='3'>
             <Heading textAlign='center' fontWeight={900} fontSize={[30,50]}>How We Solve Your Problems</Heading>
             <Flex gap='24px' flexWrap='wrap' justifyContent='center'>
                 <ServiceCard 
@@ -35,7 +35,7 @@ const index = () => {
                       description='Community'
                 />
             </Flex>
-            <Text textAlign='center' fontSize={[18,22]}>Your productivity hours starts here : <Box as='span' fontWeight={700}>Opens 8am to 7pm</Box> , Monday through Saturday.</Text>
+            <Text textAlign='center' fontSize={[16,22]}>Your productivity hours starts here : <Box as='span' fontWeight={700}>Opens 8am to 7pm</Box> , Monday through Saturday.</Text>
         </Stack>
     </Box>
   )

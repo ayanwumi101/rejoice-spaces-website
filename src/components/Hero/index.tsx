@@ -42,7 +42,7 @@ const SingleHeroCard = ({title, description, image, descriptionWidth}: HeroProps
                                 <Text fontSize={[20,28]}>{description}</Text>
                                 <Box w='auto' h='3px' bg='#2E8DE9'></Box>
                             </Box>
-                            <Heading mb='48px' fontWeight={900} fontSize={[48,60]}>{title}</Heading>
+                            <Heading mb='48px' fontWeight={900} fontSize={[45,60]}>{title}</Heading>
                             <ButtonComponent 
                                 bg='#2E8DE9'
                                 color='white'

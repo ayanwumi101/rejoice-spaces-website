@@ -11,7 +11,7 @@ const index = () => {
             <Box w={['100%','50%']} h='100%' bg='#003466' p={[7,0]} display='flex' alignItems='center' justifyContent='center'>
                 <Stack spacing='20px' maxW='450px'>
                     <Heading fontSize={[30,50]} color='white'>Why Choose Rejoice Spaces?</Heading>
-                    <Text fontSize={[18,22]} color='white'>
+                    <Text fontSize={[16,22]} color='white'>
                           We're more than just a co-working space; we're a vibrant community of passionate individuals where collaboration thrives and innovation takes flight.
                     </Text>
                     <ButtonComponent 
