@@ -1,0 +1,8 @@
+@font-face {
+  font-family: ppmori;
+  src: url('./assets/fonts/ppmori/PPMori-Regular.otf') format('opentype');
+}
+
+body{
+  font-family: ppmori;
+}
