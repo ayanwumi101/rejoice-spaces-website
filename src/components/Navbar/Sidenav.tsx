@@ -33,7 +33,7 @@ const Sidenav = ({ setOpenSideNav }: SideNavProps) => {
             // onClick={() => setOpenSideNav(false)}
         >
             <Box
-                w='50%'
+                w='75%'
                 h='100%'
                 bg='rgba(0, 36, 71, 1)'
                 py='60px'
