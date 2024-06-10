@@ -9,12 +9,12 @@ import FooterTwitterIcon from '../Icons/FooterTwitterIcon'
 const index = () => {
   return (
     <Box py='30px' borderTop='2px solid lightgray'>
-        <Flex alignItems='center' justifyContent='space-between' w={['90%','80%']} mx='auto'>
+        <Flex alignItems='center' justifyContent='space-between' w={['95%','80%']} mx='auto'>
             <Box>
-                <Text fontSize={[10, 16]}>Copywright © Rejoice Spaces, {new Date().getFullYear()}</Text>
+                <Text fontSize={[12, 16]}>Copywright © Rejoice Spaces, {new Date().getFullYear()}</Text>
             </Box>
             <Box>
-                <Flex alignItems='center' gap={['15px','38px']} color='white'>
+                <Flex alignItems='center' gap={['10px','38px']} color='white'>
                     <SocialIcon icon={FooterInstagramIcon} href='https://instagram.com' />
                     <SocialIcon icon={FooterTwitterIcon} href='https://instagram.com' />
                     <SocialIcon icon={FooterFacebookIcon} href='https://instagram.com' />

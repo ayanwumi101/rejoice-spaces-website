@@ -4,7 +4,7 @@ import { SocialIconProps } from '../../utilities/scheme'
 
 const index = ({icon, href}: SocialIconProps) => {
   return (
-    <Box as='a' href={href} target='_blank'>
+    <Box as='a' w={['30%', 'auto']} href={href} target='_blank'>
         <Icon as={icon} />
     </Box>
   )

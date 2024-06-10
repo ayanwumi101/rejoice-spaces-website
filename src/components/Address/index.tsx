@@ -35,7 +35,7 @@ const index = () => {
                             <ContactDetailItem image='/assets/icons/email.png' title='rejoicespaces@gmail.com' />
                             <ContactDetailItem image='/assets/icons/phone.png' title='+234908866775544' />
                             <Box>
-                                <Flex alignItems='center' gap='35px'>
+                                <Flex alignItems='center' gap={['0px','35px']}>
                                     <SocialIcon icon={ContactInstagramIcon} href='https://instagram.com' />
                                     <SocialIcon icon={ContactTwitterIcon} href='https://instagram.com' />
                                     <SocialIcon icon={ContactFacebookIcon} href='https://instagram.com' />

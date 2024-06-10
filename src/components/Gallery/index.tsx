@@ -22,7 +22,7 @@ const index = () => {
               pagination={{ clickable: true }}
               modules={[Pagination, Autoplay]}
               className="mySwiper"
-              slidesPerView={isMobile ? 2.4 : 4.2}
+              slidesPerView={isMobile ? 2.2 : 4.2}
               autoplay={{
                   delay: 4000,
                   disableOnInteraction: false,
