@@ -13,8 +13,8 @@ const index = () => {
           bg='#F6F6F6'
       >
           <Stack spacing='60px'>
-              <Heading textAlign='center' fontWeight={900} fontSize={50}>Find Your Perfect Fit</Heading>
-              <Flex gap='24px' alignItems='flex-start'>
+              <Heading textAlign='center' fontWeight={900} fontSize={[30,50]}>Find Your Perfect Fit</Heading>
+              <Flex gap='24px' alignItems='flex-start' flexWrap='wrap' justifyContent='center'>
                   <PricingCard
                       title='RS Delight'
                       price={2000}

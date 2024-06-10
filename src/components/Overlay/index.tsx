@@ -21,7 +21,7 @@ const index = () => {
             alignItems='center'
             justifyContent='center'
         >
-           <Box maxW='800px' mx='auto' textAlign='center' color='white' fontSize={24} fontWeight={700}>
+           <Box maxW='800px' mx='auto' textAlign='center' color='white' fontSize={[20, 24]} fontWeight={500}>
                   <Text>
                       We are curating a dynamic environment of inspiration, infrastructure support spurring innovation and creativity in individuals and businesses yielding profitable results.
                   </Text>

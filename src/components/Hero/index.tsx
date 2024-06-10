@@ -1,4 +1,4 @@
-import { Box, Text, Heading, Image, Stack } from '@chakra-ui/react'
+import { Box, Text, Heading, Image, Stack, useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -27,7 +27,7 @@ const SingleHeroCard = ({title, description, image, descriptionWidth}: HeroProps
                 bgGradient='linear(to-b, rgba(0, 36, 71, 0.3), rgba(0, 36, 71, 1))'
             >
                 <Box 
-                    w='70%'
+                    w={['90%','70%']}
                     mx='auto'
                     display='flex'
                     alignItems='flex-start'
@@ -38,11 +38,11 @@ const SingleHeroCard = ({title, description, image, descriptionWidth}: HeroProps
                     <Stack spacing='100px' w='100%'>
                         <Navbar />
                         <Box color='white'>
-                            <Box mb='24px' w={descriptionWidth}>
-                                <Text fontSize={28}>{description}</Text>
+                            <Box mb='24px' w={['200px',descriptionWidth]}>
+                                <Text fontSize={[20,28]}>{description}</Text>
                                 <Box w='auto' h='3px' bg='#2E8DE9'></Box>
                             </Box>
-                            <Heading mb='48px' fontWeight={900} fontSize={60}>{title}</Heading>
+                            <Heading mb='48px' fontWeight={900} fontSize={[48,60]}>{title}</Heading>
                             <ButtonComponent 
                                 bg='#2E8DE9'
                                 color='white'
@@ -60,6 +60,7 @@ const SingleHeroCard = ({title, description, image, descriptionWidth}: HeroProps
 
 
 const index = () => {
+    const [isMobile] = useMediaQuery('(max-width: 768px)')
   return (
     <Box w='100%' h='100vh'>
         <Swiper

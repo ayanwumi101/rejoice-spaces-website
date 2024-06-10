@@ -22,14 +22,14 @@ const ContactDetailItem = ({image, title}: ContactDetailItemProps) => {
 
 const index = () => {
     return (
-        <Box w='100%' h='750px'>
-            <Flex w='100%' h='750px'>
-                <Box w='50%' h='100%'>
+        <Box w='100%' h={['auto','750px']}>
+            <Flex w='100%' h={['auto','750px']} flexWrap='wrap'>
+                <Box w={['100%','50%']} h='100%'>
                     <Image src='/assets/images/map.png' w='100%' h='100%' objectFit='cover' />
                 </Box>
-                <Box w='50%' h='100%' bg='#003466' display='flex' alignItems='center' justifyContent='center'>
-                    <Stack spacing='20px' w='450px'>
-                        <Heading fontSize={50} color='white'>Get in Touch</Heading>
+                <Box w={['100%','50%']} h='100%' bg='#003466' p={[7,0]} display='flex' alignItems='center' justifyContent='center'>
+                    <Stack spacing='20px' maxW='450px'>
+                        <Heading fontSize={[30,50]} color='white'>Get in Touch</Heading>
                         <Stack spacing='28px'>
                             <ContactDetailItem image='/assets/icons/location.png' title='16 Idowu St, Ojodu, Lagos 101232, Lagos, Lagos, Nigeria 101232' />
                             <ContactDetailItem image='/assets/icons/email.png' title='rejoicespaces@gmail.com' />
@@ -46,7 +46,7 @@ const index = () => {
                             bg='#2E8DE9'
                             color='white'
                             text='Book Now'
-                            width='400px'
+                            width='100%'
                             onClick={() => { }}
                         />
                     </Stack>
