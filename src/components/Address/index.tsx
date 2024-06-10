@@ -4,7 +4,7 @@ import { ButtonComponent } from '../Button'
 import { ContactDetailItemProps } from '../../utilities/scheme'
 import SocialIcon from '../SocialIcon'
 import { ContactFacebookIcon, ContactInstagramIcon, ContactTwitterIcon } from '../Icons/ContactIcons'
-
+import { Link, Button as ScrollButton, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
 
 
@@ -22,7 +22,7 @@ const ContactDetailItem = ({image, title}: ContactDetailItemProps) => {
 
 const index = () => {
     return (
-        <Box w='100%' h={['auto','750px']}>
+        <Box w='100%' h={['auto','750px']} id='contact'>
             <Flex w='100%' h={['auto','750px']} flexWrap='wrap'>
                 <Box w={['100%','50%']} h='100%'>
                     <Image src='/assets/images/map.png' w='100%' h='100%' objectFit='cover' />
@@ -42,6 +42,14 @@ const index = () => {
                                 </Flex>
                             </Box>
                         </Stack>
+                        <Link
+                            activeClass="active"
+                            to="pricing"
+                            spy={true}
+                            smooth={true}
+                            offset={50}
+                            duration={500}
+                        >
                         <ButtonComponent
                             bg='#2E8DE9'
                             color='white'
@@ -49,6 +57,7 @@ const index = () => {
                             width='100%'
                             onClick={() => { }}
                         />
+                        </Link>
                     </Stack>
                 </Box>
             </Flex>

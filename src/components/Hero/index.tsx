@@ -1,12 +1,13 @@
 import { Box, Text, Heading, Image, Stack, useMediaQuery } from '@chakra-ui/react'
-import React from 'react'
+import React, {useState} from 'react'
 import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import Navbar from '../Navbar'
+import Navbar, { SideNav } from '../Navbar'
 import { HeroProps } from '../../utilities/scheme';
 import { ButtonComponent } from '../Button';
+import { Link, Button as ScrollButton, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
 
 
@@ -43,6 +44,14 @@ const SingleHeroCard = ({title, description, image, descriptionWidth}: HeroProps
                                 <Box w='auto' h='3px' bg='#2E8DE9'></Box>
                             </Box>
                             <Heading mb='48px' fontWeight={900} fontSize={[45,60]}>{title}</Heading>
+                            <Link
+                                activeClass="active"
+                                to="pricing"
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >
                             <ButtonComponent 
                                 bg='#2E8DE9'
                                 color='white'
@@ -50,6 +59,7 @@ const SingleHeroCard = ({title, description, image, descriptionWidth}: HeroProps
                                 width='290px'
                                 onClick={() => {}}
                             /> 
+                            </Link>
                         </Box>
                     </Stack>
                 </Box>
@@ -60,7 +70,8 @@ const SingleHeroCard = ({title, description, image, descriptionWidth}: HeroProps
 
 
 const index = () => {
-    const [isMobile] = useMediaQuery('(max-width: 768px)')
+    const [isMobile] = useMediaQuery('(max-width: 768px)');
+    const [openSideNav, setOpenSideNav] = useState<boolean>(false);
   return (
     <Box w='100%' h='100vh'>
         <Swiper
@@ -99,6 +110,7 @@ const index = () => {
                 />
             </SwiperSlide>
         </Swiper>
+        {openSideNav && <SideNav setOpenSideNav={setOpenSideNav} />}
     </Box>
   )
 }

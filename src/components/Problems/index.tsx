@@ -10,6 +10,7 @@ const index = () => {
         alignItems='center'
         justifyContent='center'
         bg='#F6F6F6'
+        id='features'
     >
         <Stack spacing='60px' p='3'>
             <Heading textAlign='center' fontWeight={900} fontSize={[30,50]}>How We Solve Your Problems</Heading>

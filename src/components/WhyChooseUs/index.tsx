@@ -1,7 +1,7 @@
 import { Box, Flex, Heading, Image, Text, Stack } from '@chakra-ui/react'
 import React from 'react'
 import { ButtonComponent } from '../Button'
-
+import { Link, Button as ScrollButton, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 
 
 const index = () => {
@@ -14,6 +14,14 @@ const index = () => {
                     <Text fontSize={[16,22]} color='white'>
                           We're more than just a co-working space; we're a vibrant community of passionate individuals where collaboration thrives and innovation takes flight.
                     </Text>
+                      <Link
+                          activeClass="active"
+                          to="pricing"
+                          spy={true}
+                          smooth={true}
+                          offset={50}
+                          duration={500}
+                      >
                     <ButtonComponent 
                         bg='#2E8DE9'
                         color='white'
@@ -21,6 +29,7 @@ const index = () => {
                         width='100%'
                         onClick={() => {}}
                     />
+                    </Link>
                 </Stack>
             </Box>
             <Box w={['100%','50%']} h='100%'>

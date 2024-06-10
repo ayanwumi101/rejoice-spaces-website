@@ -11,6 +11,7 @@ const index = () => {
           alignItems='center'
           justifyContent='center'
           bg='#F6F6F6'
+          id='pricing'
       >
           <Stack spacing='60px'>
               <Heading textAlign='center' fontWeight={900} fontSize={[30,50]}>Find Your Perfect Fit</Heading>

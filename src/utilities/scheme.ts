@@ -42,3 +42,7 @@ export interface ContactDetailItemProps {
 export interface GalleryItemProps {
     img: string
 }
+
+export interface SideNavProps {
+    setOpenSideNav: () => void 
+}
