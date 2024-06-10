@@ -4,14 +4,14 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import Navbar, { SideNav } from '../Navbar'
+import Navbar from '../Navbar'
 import { HeroProps } from '../../utilities/scheme';
 import { ButtonComponent } from '../Button';
 import { Link, Button as ScrollButton, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { SideNavProps } from '../../utilities/scheme';
 
 
-
-const SingleHeroCard = ({title, description, image, descriptionWidth}: HeroProps) => {
+const SingleHeroCard = ({title, description, image, descriptionWidth, setOpenSideNav}: HeroProps) => {
     return (
         <Box
             bgImage={image}
@@ -37,7 +37,7 @@ const SingleHeroCard = ({title, description, image, descriptionWidth}: HeroProps
                     py='60px'
                 >
                     <Stack spacing='100px' w='100%'>
-                        <Navbar />
+                        <Navbar setOpenSideNav={setOpenSideNav} />
                         <Box color='white'>
                             <Box mb='24px' w={['200px',descriptionWidth]}>
                                 <Text fontSize={[20,28]}>{description}</Text>
@@ -69,9 +69,8 @@ const SingleHeroCard = ({title, description, image, descriptionWidth}: HeroProps
 }
 
 
-const index = () => {
-    const [isMobile] = useMediaQuery('(max-width: 768px)');
-    const [openSideNav, setOpenSideNav] = useState<boolean>(false);
+const index = ({ setOpenSideNav }: SideNavProps) => {
+  const [isMobile] = useMediaQuery('(max-width: 768px)');
   return (
     <Box w='100%' h='100vh'>
         <Swiper
@@ -91,6 +90,7 @@ const index = () => {
                       description='Modern co-working space'
                       image='/assets/images/rejoice-1.jpeg'
                       descriptionWidth='350px'
+                      setOpenSideNav={setOpenSideNav}
                 />
             </SwiperSlide>
             <SwiperSlide>
@@ -99,6 +99,7 @@ const index = () => {
                       description='Rejoice Spaces'
                       image='/assets/images/rejoice-2.jpeg'
                       descriptionWidth='210px'
+                      setOpenSideNav={setOpenSideNav}
                 />
             </SwiperSlide>
             <SwiperSlide>
@@ -107,10 +108,10 @@ const index = () => {
                       description='Rejoice Spaces'
                       image='/assets/images/rejoice-3.jpeg'
                       descriptionWidth='210px'
+                      setOpenSideNav={setOpenSideNav}
                 />
             </SwiperSlide>
         </Swiper>
-        {openSideNav && <SideNav setOpenSideNav={setOpenSideNav} />}
     </Box>
   )
 }

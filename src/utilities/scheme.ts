@@ -10,6 +10,7 @@ export interface HeroProps {
     description: string
     image: string
     descriptionWidth: string
+    setOpenSideNav: (value: boolean) => void
 }
 
 export interface ButtonProps {
@@ -44,5 +45,9 @@ export interface GalleryItemProps {
 }
 
 export interface SideNavProps {
-    setOpenSideNav: () => void 
+    setOpenSideNav: (value: boolean) => void 
+}
+
+export interface NavbarProps {
+    setOpenSideNav: (value: boolean) => void
 }
