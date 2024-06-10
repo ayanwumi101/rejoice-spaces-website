@@ -33,3 +33,12 @@ export interface PricingCardProps {
     duration: string
     onClick: () => void
 }
+
+export interface ContactDetailItemProps {
+    image: string
+    title: string
+}
+
+export interface GalleryItemProps {
+    img: string
+}

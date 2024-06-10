@@ -10,6 +10,7 @@ import Problems from './components/Problems'
 import Overlay from './components/Overlay'
 import Pricing from './components/Pricing'
 import Address from './components/Address'
+import Gallery from './components/Gallery'
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
       <Overlay />
       <Pricing />
       <Address />
+      <Gallery />
       <Footer />
     </Box>
   )
