@@ -36,9 +36,9 @@ const index = () => {
                             <ContactDetailItem image='/assets/icons/phone.png' title='+234908866775544' />
                             <Box>
                                 <Flex alignItems='center' gap={['0px','35px']}>
-                                    <SocialIcon icon={ContactInstagramIcon} href='https://instagram.com' />
-                                    <SocialIcon icon={ContactTwitterIcon} href='https://instagram.com' />
-                                    <SocialIcon icon={ContactFacebookIcon} href='https://instagram.com' />
+                                    <SocialIcon icon={ContactInstagramIcon} href='https://www.instagram.com/rejoicespace?igsh=cTJta3ZxajJyZndy' />
+                                    <SocialIcon icon={ContactTwitterIcon} href='https://x.com/Rejoicespaces?t=JkhdbodltYa6I0TX1k_qsw&s=09'        />
+                                    <SocialIcon icon={ContactFacebookIcon} href='https://www.facebook.com/share/vznT72Rnevs76SL4/?mibextid=qi2Omg' />
                                 </Flex>
                             </Box>
                         </Stack>

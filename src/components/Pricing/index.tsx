@@ -1,4 +1,4 @@
-import { Box, Heading, Text, Stack, Flex, FormLabel, Input, FormControl, Button } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Flex, FormLabel, Input, FormControl, Button, useToast } from '@chakra-ui/react'
 import React from 'react'
 import { PricingCard } from '../Cards'
 import Modal from '../Modal'
@@ -8,6 +8,7 @@ import useFlutterwavePayment from '../../utilities/flutterwaveConfig'
 
 const index = () => {
   const [openModal, setOpenModal] = React.useState(false);
+  const toast = useToast();
   const { setEmail, setName, setPhoneNumber, triggerPayment, setPlan, email, phoneNumber, name, plan } = useFlutterwavePayment();
 
   const purchasePlan = (plan: string) => {
@@ -25,6 +26,15 @@ const index = () => {
     if(email && phoneNumber && name && plan){
         triggerPayment();
         setOpenModal(false);
+    }else{
+        toast({
+            title: "Error",
+            description: "Please fill all fields",
+            status: "error",
+            duration: 3000,
+            isClosable: true,
+            position: 'top'
+        })
     }
   }
 
@@ -35,7 +45,7 @@ const index = () => {
         onClose={() => setOpenModal(false)}
       >
         <Stack spacing='30px'>
-            <Heading fontSize={24} textAlign='center'>Rejoice Spaces Subscription</Heading>
+            <Heading fontSize={24} textAlign='center'textTransform='capitalize'>Rejoice Spaces {plan} Subscription</Heading>
             <FormControl>
                 <Stack spacing='20px'>
                     <Box>
@@ -48,7 +58,7 @@ const index = () => {
                     </Box>
                     <Box>
                         <FormLabel fontSize={14}>Phone Number</FormLabel>
-                        <Input _placeholder={{ fontSize: 14 }} type='tel' onChange={(e) => setPhoneNumber(e.target.value)} placeholder='Enter your phone number' />
+                        <Input maxLength={11} _placeholder={{ fontSize: 14 }} type='tel' onChange={(e) => setPhoneNumber(e.target.value)} placeholder='Enter your phone number' />
                     </Box>
                 </Stack>
             </FormControl>

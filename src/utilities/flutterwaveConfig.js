@@ -66,6 +66,14 @@ const useFlutterwavePayment = () => {
         }
       },
       onClose: () => {
+        toast({
+            title: "Error",
+            description: "Payment was cancelled!",
+            status: "error",
+            duration: 3000,
+            isClosable: true,
+            position: 'top',
+        });
         closePaymentModal();
       },
     });

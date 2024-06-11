@@ -15,9 +15,9 @@ const index = () => {
                   </Box>
                   <Box>
                       <Flex alignItems='center' gap={['15px','40px']}>
-                        <SocialIcon href='https://instagram.com' icon={InstagramIcon} />
-                        <SocialIcon href='https://twitter.com' icon={TwitterIcon} />
-                        <SocialIcon href='https://facebook.com' icon={FacebookIcon} />
+                        <SocialIcon href='https://www.instagram.com/rejoicespace?igsh=cTJta3ZxajJyZndy'   icon={InstagramIcon} />
+                        <SocialIcon href='https://x.com/Rejoicespaces?t=JkhdbodltYa6I0TX1k_qsw&s=09'            icon={TwitterIcon} />
+                        <SocialIcon href='https://www.facebook.com/share/vznT72Rnevs76SL4/?mibextid=qi2Omg'   icon={FacebookIcon} />
                       </Flex>
                   </Box>
             </Flex>
