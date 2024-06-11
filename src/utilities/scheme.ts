@@ -51,3 +51,9 @@ export interface SideNavProps {
 export interface NavbarProps {
     setOpenSideNav: (value: boolean) => void
 }
+
+export interface ModalProps {
+    isOpen: boolean
+    onClose: () => void
+    children: React.ReactNode
+}
