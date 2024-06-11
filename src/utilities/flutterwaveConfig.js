@@ -1,18 +1,20 @@
 import { useState } from "react";
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
+import { useToast } from "@chakra-ui/react";
+
 
 const useFlutterwavePayment = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [plan, setPlan] = useState("");
+  const toast = useToast();
+  const publicKey = import.meta.env.VITE_FLUTTERWAVE_PUBLIC_KEY;
 
   const initializePayment = useFlutterwave({
-    public_key: "FLWPUBK-**************************-X",
+    public_key: publicKey,
     tx_ref: Date.now(),
-    amount: amount,
+    amount: plan === "delight" ? 2000 : plan === "max" ? 12000 : 3000,
     currency: "NGN",
     payment_options: "card,mobilemoney,ussd",
     customer: {
@@ -21,35 +23,61 @@ const useFlutterwavePayment = () => {
       name: name,
     },
     customizations: {
-      title: title,
-      description: description,
+      title: `Payment for RS ${plan} Plan`,
+      description: `Payment for RS ${plan} subscription plan by ${name}`,
       logo: "https://res.cloudinary.com/ddke4ujej/image/upload/v1718057625/Rejoice_Logistics_Logo-05_1_zuo37s.svg",
     },
   });
 
   const triggerPayment = () => {
-    // Ensure all required fields are filled
-    if (!email || !name || !phoneNumber || !title || !description) {
-      alert("Please fill all the fields");
+    if (!email || !name || !phoneNumber || !plan) {
+      toast({
+        title: "Error",
+        description: "All fields are required!",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+        position: 'top',
+      });
       return;
     }
-    // Call the initializePayment function
     initializePayment({
       callback: (response) => {
-        console.log(response);
-        closePaymentModal(); // this will close the modal programmatically
+        if(response.status === "successful"){
+            toast({
+                title: "Success",
+                description: "Payment was successful!",
+                status: "success",
+                duration: 4000,
+                isClosable: true,
+                position: 'top',
+            });
+            closePaymentModal();
+        }else{
+            toast({
+                title: "Error",
+                description: "Payment failed! please try again.",
+                status: "error",
+                duration: 4000,
+                isClosable: true,
+                position: 'top',
+            });
+            closePaymentModal();
+        }
       },
-      onClose: () => {},
+      onClose: () => {
+        closePaymentModal();
+      },
     });
   };
 
   return {
     setEmail,
     setName,
+    setPlan,
     setPhoneNumber,
-    setTitle,
-    setDescription,
     triggerPayment,
+    email, name, phoneNumber, plan
   };
 };
 

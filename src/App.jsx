@@ -30,13 +30,9 @@ function App() {
 
   useEffect(() => {
 
-    Events.scrollEvent.register('begin', (to, element) => {
-      console.log('begin', to, element);
-    });
+    Events.scrollEvent.register('begin');
 
-    Events.scrollEvent.register('end', (to, element) => {
-      console.log('end', to, element);
-    });
+    Events.scrollEvent.register('end');
 
     scrollSpy.update();
 

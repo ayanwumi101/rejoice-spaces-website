@@ -1,24 +1,31 @@
-import { Box, Heading, Text, Stack, Flex, FormLabel, Input, FormControl, Button, Image } from '@chakra-ui/react'
+import { Box, Heading, Text, Stack, Flex, FormLabel, Input, FormControl, Button } from '@chakra-ui/react'
 import React from 'react'
 import { PricingCard } from '../Cards'
 import Modal from '../Modal'
+import useFlutterwavePayment from '../../utilities/flutterwaveConfig'
+
 
 
 const index = () => {
   const [openModal, setOpenModal] = React.useState(false);
-  const [email, setEmail] = React.useState('');
-    const [name, setName] = React.useState('');
-    const [phone, setPhone] = React.useState('');
+  const { setEmail, setName, setPhoneNumber, triggerPayment, setPlan, email, phoneNumber, name, plan } = useFlutterwavePayment();
 
   const purchasePlan = (plan: string) => {
         setOpenModal(true);
         if (plan === 'delight') {
-            console.log('Delight');
+            setPlan('delight')
         } else if (plan === 'max') {
-            console.log('Max');
+            setPlan('max')
         } else if (plan === 'adventure') {
-            console.log('Adventure');
+            setPlan('adventure');
         }
+  }
+
+  const handlePayment = () => {
+    if(email && phoneNumber && name && plan){
+        triggerPayment();
+        setOpenModal(false);
+    }
   }
 
   return (
@@ -32,20 +39,20 @@ const index = () => {
             <FormControl>
                 <Stack spacing='20px'>
                     <Box>
-                        <FormLabel>Full Name</FormLabel>
-                        <Input value={name} onChange={(e) => setName(e.target.value)} type='text' placeholder='Enter your full name' />
+                        <FormLabel fontSize={14}>Full Name</FormLabel>
+                        <Input _placeholder={{fontSize: 14}} onChange={(e) => setName(e.target.value)} type='text' placeholder='Enter your full name' />
                     </Box>
                     <Box>
-                        <FormLabel>Email</FormLabel>
-                        <Input value={email} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Enter your email' />
+                        <FormLabel fontSize={14}>Email</FormLabel>
+                        <Input _placeholder={{ fontSize: 14 }} onChange={(e) => setEmail(e.target.value)} type='email' placeholder='Enter your email' />
                     </Box>
                     <Box>
-                        <FormLabel>Phone Number</FormLabel>
-                        <Input value={phone} type='tel' placeholder='Enter your phone number' />
+                        <FormLabel fontSize={14}>Phone Number</FormLabel>
+                        <Input _placeholder={{ fontSize: 14 }} type='tel' onChange={(e) => setPhoneNumber(e.target.value)} placeholder='Enter your phone number' />
                     </Box>
                 </Stack>
             </FormControl>
-            <Button>Submit</Button>i
+            <Button bg='#2E8DE9' color='white' py='25px' fontWeight={500} onClick={handlePayment}>Submit</Button>
         </Stack>
       </Modal>
       <Box py='80px'
