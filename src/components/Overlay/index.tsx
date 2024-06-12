@@ -22,7 +22,7 @@ const index = () => {
             justifyContent='center' p='5'
         >
            <Box maxW='800px' mx='auto' textAlign='center' color='white' fontSize={[18, 24]} fontWeight={500}>
-                  <Text>
+                  <Text lineHeight='48px'>
                       We are curating a dynamic environment of inspiration, infrastructure support spurring innovation and creativity in individuals and businesses yielding profitable results.
                   </Text>
            </Box>

@@ -29,7 +29,8 @@ const index = () => {
                 </Box>
                 <Box w={['100%','50%']} h='100%' bg='#003466' p={[7,0]} display='flex' alignItems='center' justifyContent='center'>
                     <Stack spacing='20px' maxW='450px'>
-                        <Heading fontSize={[30,50]} color='white'>Get in Touch</Heading>
+                        <Heading fontSize={[30, 50]} bgGradient='linear(to-r, rgba(255, 255, 255, 1), rgba(255,255,255,0.3))'
+                            bgClip='text'>Get in Touch</Heading>
                         <Stack spacing='28px'>
                             <ContactDetailItem image='/assets/icons/location.png' title='16 Idowu St, Ojodu, Lagos 101232, Lagos, Lagos, Nigeria 101232' />
                             <ContactDetailItem image='/assets/icons/email.png' title='rejoicespaces@gmail.com' />

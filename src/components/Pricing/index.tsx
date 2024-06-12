@@ -73,7 +73,8 @@ const index = () => {
           id='pricing'
       >
           <Stack spacing='60px'>
-              <Heading textAlign='center' fontWeight={900} fontSize={[30,50]}>Find Your Perfect Fit</Heading>
+                  <Heading textAlign='center' bgGradient='linear(to-r, rgba(0, 0, 0, 1) 50%, rgba(0,0,0,0.5) 50%)'
+                      bgClip='text' fontWeight={900} fontSize={[30,50]}>Find Your Perfect Fit</Heading>
               <Flex gap='24px' alignItems='flex-start' flexWrap='wrap' justifyContent='center'>
                   <PricingCard
                       title='RS Delight'

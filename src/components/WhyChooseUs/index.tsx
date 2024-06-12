@@ -9,9 +9,16 @@ const index = () => {
     <Box w='100%' h={['auto','770px']}>
         <Flex w='100%' h={['auto','770px']} flexWrap='wrap-reverse'>
             <Box w={['100%','50%']} h='100%' bg='#003466' p={[7,0]} display='flex' alignItems='center' justifyContent='center'>
-                <Stack spacing='20px' maxW='450px'>
-                    <Heading fontSize={[30,50]} color='white'>Why Choose Rejoice Spaces?</Heading>
-                    <Text fontSize={[16,22]} color='white'>
+                <Stack spacing='20px' maxW='500px'>
+                    <Heading fontSize={[30,40]}
+                    fontWeight={900}
+                          bgGradient='linear(to-r, rgba(255, 255, 255, 1), rgba(255,255,255,0.3))'
+                          bgClip='text'
+                    >Why Choose Rejoice Spaces?</Heading>
+                    <Text fontSize={[16,22]} lineHeight='48px'
+                          bgGradient='linear(to-r, rgba(255, 255, 255, 1), rgba(255,255,255,0.3))'
+                          bgClip='text'
+                    >
                           We're more than just a co-working space; we're a vibrant community of passionate individuals where collaboration thrives and innovation takes flight.
                     </Text>
                       <Link

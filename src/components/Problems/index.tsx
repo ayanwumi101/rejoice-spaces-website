@@ -13,7 +13,8 @@ const index = () => {
         id='features'
     >
         <Stack spacing='60px' p='3'>
-            <Heading textAlign='center' fontWeight={900} fontSize={[30,50]}>How We Solve Your Problems</Heading>
+        <Heading textAlign='center' bgGradient='linear(to-r, rgba(0, 0, 0, 1) 50%, rgba(0,0,0,0.5) 50%)'
+          bgClip='text' fontWeight={900} fontSize={[30,50]}>How We Solve Your Problems</Heading>
             <Flex gap='24px' flexWrap='wrap' justifyContent='center'>
                 <ServiceCard 
                     img='/assets/icons/1.png'

@@ -1,8 +1,8 @@
 @font-face {
-  font-family: ppmori;
-  src: url('./assets/fonts/ppmori/PPMori-Regular.otf') format('opentype');
+  font-family: league-spartan;
+  src: url('./assets/fonts/league-spartan/LeagueSpartan-Regular.ttf') format('truetype');
 }
 
 body{
-  font-family: ppmori;
+  font-family: league-spartan;
 }
