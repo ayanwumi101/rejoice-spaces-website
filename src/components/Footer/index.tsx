@@ -11,7 +11,7 @@ const index = () => {
     <Box py='30px' borderTop='2px solid lightgray'>
         <Flex alignItems='center' justifyContent={['center','space-between']} w={['95%','80%']} mx='auto' flexWrap='wrap-reverse'>
             <Box>
-                <Text fontSize={[14, 16]}>Copyright &copy; {new Date().getFullYear()} Rejoice Spaces, All Rights Reserved.</Text>
+                <Text fontSize={[14, 16]} textAlign={['center', 'left']}>Copyright &copy; {new Date().getFullYear()} Rejoice Spaces, All Rights Reserved.</Text>
             </Box>
             <Box mb={[5, 0]}>
                 <Flex alignItems='center' gap={['10px','38px']} color='white'>
