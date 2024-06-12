@@ -62,7 +62,7 @@ const index = () => {
                     </Box>
                 </Stack>
             </FormControl>
-            <Button bg='#2E8DE9' color='white' py='25px' fontWeight={500} onClick={handlePayment}>Submit</Button>
+            <Button bg='#2E8DE9' color='white' py='25px' fontWeight={500} onClick={handlePayment}>Proceed to Payment</Button>
         </Stack>
       </Modal>
       <Box py='80px'
