@@ -14,7 +14,7 @@ const useFlutterwavePayment = () => {
   const initializePayment = useFlutterwave({
     public_key: publicKey,
     tx_ref: Date.now(),
-    amount: plan === "delight" ? 2000 : plan === "max" ? 12000 : 3000,
+    amount: plan === "delight" ? 2000 : plan === "max" ? 12000 : 4000,
     currency: "NGN",
     payment_options: "card,mobilemoney,ussd",
     customer: {
@@ -67,7 +67,7 @@ const useFlutterwavePayment = () => {
       },
       onClose: () => {
         toast({
-            title: "Error",
+            title: "Oops!",
             description: "Payment was cancelled!",
             status: "error",
             duration: 3000,

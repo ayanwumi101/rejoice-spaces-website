@@ -14,9 +14,10 @@ const index = ({children, isOpen, onClose}:ModalProps) => {
         isOpen={isOpen} 
         onClose={onClose}
         isCentered
+        blockScrollOnMount={true}
     >
         <ModalOverlay />
-        <ModalContent py='7'>
+        <ModalContent py='7' maxW={['350px', '450px']}>
           <ModalCloseButton />
           <ModalBody>
             {children}

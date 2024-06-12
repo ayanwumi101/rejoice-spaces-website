@@ -45,7 +45,7 @@ const index = () => {
         onClose={() => setOpenModal(false)}
       >
         <Stack spacing='30px'>
-            <Heading fontSize={24} textAlign='center'textTransform='capitalize'>Rejoice Spaces {plan} Subscription</Heading>
+            <Heading fontSize={22} lineHeight='33px' textAlign='center'textTransform='capitalize'>Rejoice Spaces {plan} plan Subscription</Heading>
             <FormControl>
                 <Stack spacing='20px'>
                     <Box>
@@ -91,7 +91,7 @@ const index = () => {
                   />
                   <PricingCard
                       title='RS Adventure'
-                      price={3000}
+                      price={4000}
                       duration='day'
                       onClick={() => purchasePlan('adventure')}
                       features={['Work Area', 'Complimentary coffee/water', 'Unlimited Internet', 'Complimentary Snack', 'Free to use headset']}
