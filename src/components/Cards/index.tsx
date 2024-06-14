@@ -6,7 +6,7 @@ import { ButtonComponent } from "../Button"
 
 export const ServiceCard = ({img, title, description}: ServiceCardProps) => {
     return (
-        <Box w={['152px','250px']} bg='white' h='auto' boxShadow='md' borderRadius='12px' py={[5,'8']} px={[2,'4']}>
+        <Box w={['47%','250px']} bg='white' h='auto' boxShadow='md' borderRadius='12px' py={[5,'8']} px={[2,'4']}>
             <Stack spacing={['20px','28px']}>
                 <Image src={img} display='block' mx='auto' />
                 <Heading fontSize={[16,20]} lineHeight='30px' textAlign='center' color='#003466'>{title}</Heading>
