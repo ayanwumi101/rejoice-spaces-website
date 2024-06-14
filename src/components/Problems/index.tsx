@@ -15,7 +15,7 @@ const index = () => {
     >
         <Stack spacing={['30px','60px']} p='3'>
         <Heading textAlign='center' fontWeight={900} fontSize={[25, 50]}>How We Solve <Box as='span' color='#B2C2D1'>Your Problems</Box></Heading>
-            <Flex gap={['15px','24px']} flexWrap='wrap' justifyContent={['space-between','center']}>
+            <Flex gap={['10px','24px']} flexWrap='wrap' justifyContent={['space-between','center']}>
                 <ServiceCard 
                     img='/assets/icons/1.png'
                     title='Workspace Essentials'
