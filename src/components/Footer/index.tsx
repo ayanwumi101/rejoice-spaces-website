@@ -9,7 +9,7 @@ import FooterTwitterIcon from '../Icons/FooterTwitterIcon'
 const index = () => {
   return (
     <Box py='30px' borderTop='2px solid lightgray'>
-        <Flex alignItems='center' justifyContent={['center','space-between']} w={['95%','80%']} mx='auto'>
+        <Flex alignItems='center' justifyContent='space-between' gap={['20px', 0]} w={['95%','80%']} mx='auto'>
             <Box>
                 <Text fontSize={[14, 16]}>Copyright &copy; {new Date().getFullYear()} Rejoice Spaces, All Rights Reserved.</Text>
             </Box>
