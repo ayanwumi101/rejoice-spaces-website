@@ -17,17 +17,17 @@ const GalleryItem = ({img}) => {
 const index = () => {
     const [isMobile] = useMediaQuery('(max-width: 768px)')
   return (
-    <Box pt='80px' pb='10px' margin='auto'>
+    <Box py='80px' margin='auto'>
         <Swiper
               pagination={{ clickable: true }}
-              modules={[Pagination, Autoplay]}
+              modules={[Autoplay]}
               className="mySwiper"
-              slidesPerView={isMobile ? 2.2 : 4.2}
+              slidesPerView={isMobile ? 2.4 : 4.2}
               autoplay={{
-                  delay: 4000,
+                  delay: 1000,
                   disableOnInteraction: false,
               }}
-              style={{ height: '100%', width: '100%', paddingBottom: '70px'}}
+              style={{ height: '100%', width: '100%'}}
         >
             <SwiperSlide>
                 <GalleryItem img='/assets/images/rejoice-1.jpeg' />

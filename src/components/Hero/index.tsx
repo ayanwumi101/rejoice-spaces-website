@@ -28,7 +28,7 @@ const SingleHeroCard = ({title, description, image, descriptionWidth, setOpenSid
                 bgGradient='linear(to-b, rgba(0, 36, 71, 0.3), rgba(0, 36, 71, 1))'
             >
                 <Box 
-                    w={['90%','70%']}
+                    w={['90%','65%']}
                     mx='auto'
                     display='flex'
                     alignItems='flex-start'
@@ -39,11 +39,11 @@ const SingleHeroCard = ({title, description, image, descriptionWidth, setOpenSid
                     <Stack spacing='100px' w='100%'>
                         <Navbar setOpenSideNav={setOpenSideNav} />
                         <Box color='white'>
-                            <Box mb='24px' w={['200px',descriptionWidth]}>
+                            <Box mb='24px' w={[descriptionWidth[0],descriptionWidth[1]]}>
                                 <Text fontSize={[20,28]}>{description}</Text>
                                 <Box w='auto' h='3px' bg='#2E8DE9'></Box>
                             </Box>
-                            <Heading mb='48px' fontWeight={900} fontSize={[45,60]}>{title}</Heading>
+                            <Heading mb='48px' fontWeight={[600,500]} lineHeight={['50px','100px']} fontSize={[45,100]}>{title}</Heading>
                             <Link
                                 activeClass="active"
                                 to="pricing"
@@ -75,11 +75,11 @@ const index = ({ setOpenSideNav }: SideNavProps) => {
     <Box w='100%' h='100vh'>
         <Swiper
             pagination={{ clickable: true }}
-            modules={[Pagination, Autoplay]}
+            modules={[Autoplay]}
             className="mySwiper"
             slidesPerView={1}
             autoplay={{
-                delay: 4000,
+                delay: 2000,
                 disableOnInteraction: false,
             }}
             style={{ height: '100%', width: '100%' }}
@@ -89,7 +89,7 @@ const index = ({ setOpenSideNav }: SideNavProps) => {
                       title='Welcome to Rejoice Spaces'
                       description='Modern co-working space'
                       image='/assets/images/rejoice-1.jpeg'
-                      descriptionWidth='350px'
+                      descriptionWidth={['220px','300px']}
                       setOpenSideNav={setOpenSideNav}
                 />
             </SwiperSlide>
@@ -98,7 +98,7 @@ const index = ({ setOpenSideNav }: SideNavProps) => {
                       title='Your Productivity Begins Here'
                       description='Rejoice Spaces'
                       image='/assets/images/rejoice-2.jpeg'
-                      descriptionWidth='210px'
+                      descriptionWidth={['130px','180px']}
                       setOpenSideNav={setOpenSideNav}
                 />
             </SwiperSlide>
@@ -107,7 +107,7 @@ const index = ({ setOpenSideNav }: SideNavProps) => {
                       title='Ready to Level up?'
                       description='Rejoice Spaces'
                       image='/assets/images/rejoice-3.jpeg'
-                      descriptionWidth='210px'
+                      descriptionWidth={['130px','180px']}
                       setOpenSideNav={setOpenSideNav}
                 />
             </SwiperSlide>

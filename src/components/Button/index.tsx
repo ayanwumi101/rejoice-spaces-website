@@ -18,7 +18,7 @@ export const ButtonComponent: React.FC<ButtonProps> = ({
             px="16px"
             borderRadius="4px"
             fontWeight={500}
-            w={width}
+            w={['162px', width]}
             onClick={onClick}
             _hover={{bg: bg}}
         >

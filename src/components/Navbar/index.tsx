@@ -22,7 +22,7 @@ const index = ({ setOpenSideNav }: NavbarProps) => {
                           offset={50}
                           duration={500}                        
                       >
-                        <Text fontSize={16} cursor='pointer' fontWeight={600}>Features</Text>
+                        <Text fontSize={20} cursor='pointer' fontWeight={500}>Features</Text>
                       </Link>
                       <Link
                           activeClass="active"
@@ -32,7 +32,7 @@ const index = ({ setOpenSideNav }: NavbarProps) => {
                           offset={50}
                           duration={500}
                       >
-                          <Text fontSize={16} cursor='pointer' fontWeight={600}>Pricing</Text>
+                          <Text fontSize={20} cursor='pointer' fontWeight={500}>Pricing</Text>
                       </Link>
                       <Link
                           activeClass="active"
@@ -42,7 +42,7 @@ const index = ({ setOpenSideNav }: NavbarProps) => {
                           offset={50}
                           duration={500}
                       >
-                          <Text fontSize={16} cursor='pointer' fontWeight={600}>Contact Us</Text>
+                          <Text fontSize={20} cursor='pointer' fontWeight={500}>Contact Us</Text>
                       </Link>
                 </Flex>
             </Box>

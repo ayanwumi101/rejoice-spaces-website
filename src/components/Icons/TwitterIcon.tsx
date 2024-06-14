@@ -1,8 +1,11 @@
+import { useMediaQuery } from '@chakra-ui/react'
 import React from 'react'
 
+
 const TwitterIcon = () => {
+    const [isMobile] = useMediaQuery('(max-width: 768px)')
   return (
-      <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width={isMobile ? '18' : "21"} height={isMobile ? '18' : "20"} viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <mask id="mask0_49_137" style={{maskType: 'luminance'}} maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="20">
               <path d="M0.5 0H20.5V20H0.5V0Z" fill="white" />
           </mask>

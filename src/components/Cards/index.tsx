@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Stack, Heading, Text, Image, VStack } from "@chakra-ui/react"
+import { Box, Stack, Heading, Text, Image, VStack, Button } from "@chakra-ui/react"
 import { ServiceCardProps, PricingCardProps } from "../../utilities/scheme"
 import { ButtonComponent } from "../Button"
 
@@ -35,13 +35,19 @@ export const PricingCard = ({title, price, onClick, features, duration}: Pricing
                     <Text color='rgba(0, 0, 0, .7)' key={index} textAlign='center' borderBottom='1px solid lightgray' pb='3'>{feature}</Text>
                 ))}
             </VStack>
-            <ButtonComponent 
-                text="Book Now"
+
+            <Button
                 color="white"
                 width="100%"
                 onClick={onClick}
                 bg='#2E8DE9'
-            />
+                py="26px"
+                px="16px"
+                fontWeight={500}
+                _hover={{bg: '#2E8DE9'}}
+            >
+                Book Now
+            </Button>
         </Box>
     )
 }

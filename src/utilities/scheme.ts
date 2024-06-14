@@ -9,7 +9,7 @@ export interface HeroProps {
     title: string
     description: string
     image: string
-    descriptionWidth: string
+    descriptionWidth: string[]
     setOpenSideNav: (value: boolean) => void
 }
 

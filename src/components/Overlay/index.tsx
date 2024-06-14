@@ -18,8 +18,8 @@ const index = () => {
             h='100%'
             bgGradient='linear(to-b, rgba(0, 36, 71, 0.3), rgba(0, 36, 71, 1))'
             display='flex'
-            alignItems='center'
-            justifyContent='center' p='5'
+            alignItems='flex-end'
+            justifyContent='center' p='8'
         >
            <Box maxW='800px' mx='auto' textAlign='center' color='white' fontSize={[18, 24]} fontWeight={500}>
                   <Text lineHeight='48px'>

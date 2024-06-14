@@ -10,16 +10,15 @@ const index = () => {
         <Flex w='100%' h={['auto','770px']} flexWrap='wrap-reverse'>
             <Box w={['100%','50%']} h='100%' bg='#003466' p={[7,0]} display='flex' alignItems='center' justifyContent='center'>
                 <Stack spacing='20px' maxW='500px'>
-                    <Heading fontSize={[30,40]}
+                    <Heading fontSize={[30,60]}
                     fontWeight={900}
-                          bgGradient='linear(to-r, rgba(255, 255, 255, 1), rgba(255,255,255,0.3))'
                           bgClip='text'
-                    >Why Choose Rejoice Spaces?</Heading>
+                          color='white'
+                      >Why Choose <br /> <Box as='span' color='#B2C2D1'> Rejoice Spaces? </Box></Heading>
                     <Text fontSize={[16,22]} lineHeight='48px'
-                          bgGradient='linear(to-r, rgba(255, 255, 255, 1), rgba(255,255,255,0.3))'
-                          bgClip='text'
+                          color='white'
                     >
-                          We're more than just a co-working space; we're a vibrant community of passionate individuals where collaboration thrives and innovation takes flight.
+                          We're more than just a co-working space; we're a vibrant community of passionate <Box as='span' color='#B2C2D1'>individuals where collaboration thrives and innovation takes flight.</Box>
                     </Text>
                       <Link
                           activeClass="active"
