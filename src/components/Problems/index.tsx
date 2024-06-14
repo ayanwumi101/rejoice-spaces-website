@@ -12,10 +12,9 @@ const index = () => {
         bg='#F6F6F6'
         id='features'
     >
-        <Stack spacing='60px' p='3'>
-        <Heading textAlign='center' bgGradient='linear(to-r, rgba(0, 0, 0, 1) 50%, rgba(0,0,0,0.5) 50%)'
-          bgClip='text' fontWeight={900} fontSize={[30,50]}>How We Solve Your Problems</Heading>
-            <Flex gap='24px' flexWrap='wrap' justifyContent='center'>
+        <Stack spacing={['30px','60px']} p='3'>
+        <Heading textAlign='center' fontWeight={900} fontSize={[25, 50]}>How We Solve <Box as='span' color='#B2C2D1'>Your Problems</Box></Heading>
+            <Flex gap={['15px','24px']} flexWrap='wrap' justifyContent='center'>
                 <ServiceCard 
                     img='/assets/icons/1.png'
                     title='Workspace Essentials'
