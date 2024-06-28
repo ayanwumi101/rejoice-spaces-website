@@ -53,6 +53,10 @@ const useFlutterwavePayment = () => {
                 position: 'top',
             });
             closePaymentModal();
+            setEmail("");
+            setName("");
+            setPhoneNumber("");
+            setPlan("");
         }else{
             toast({
                 title: "Error",
@@ -63,6 +67,10 @@ const useFlutterwavePayment = () => {
                 position: 'top',
             });
             closePaymentModal();
+            setEmail("");
+            setName("");
+            setPhoneNumber("");
+            setPlan("");
         }
       },
       onClose: () => {
@@ -75,6 +83,10 @@ const useFlutterwavePayment = () => {
             position: 'top',
         });
         closePaymentModal();
+        setEmail('');
+        setName('');
+        setPhoneNumber('');
+        setPlan('');
       },
     });
   };
