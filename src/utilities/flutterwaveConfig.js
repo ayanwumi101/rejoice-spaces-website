@@ -14,7 +14,7 @@ const useFlutterwavePayment = () => {
   const initializePayment = useFlutterwave({
     public_key: publicKey,
     tx_ref: Date.now(),
-    amount: plan === "delight" ? 2000 : plan === "max" ? 12000 : 4000,
+    amount: plan === "delight" ? 4000 : plan === "max" ? 18000 : plan === 'adventure' ? 7000 : plan === 'supreme' ? 11000 : plan === 'prime' ? 28000 : plan === 'luxe' ? 42000 : 70000,
     currency: "NGN",
     payment_options: "card,mobilemoney,ussd",
     customer: {

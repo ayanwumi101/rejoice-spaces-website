@@ -33,7 +33,7 @@ const index = () => {
                         <Heading fontSize={[30, 50]} bgGradient='linear(to-r, rgba(255, 255, 255, 1), rgba(255,255,255,0.3))'
                             bgClip='text'>Get in Touch</Heading>
                         <Stack spacing='28px'>
-                            <ContactDetailItem image='/assets/icons/location.png' title='16 Idowu St, Ojodu, Lagos 101232, Lagos, Lagos, Nigeria 101232' />
+                            <ContactDetailItem image='/assets/icons/location.png' title='17 Idowu St, Ojodu, Lagos 101232, Lagos, Lagos, Nigeria 101232' />
                             <ContactDetailItem image='/assets/icons/email.png' title='rejoicespaces@gmail.com' />
                             <ContactDetailItem image='/assets/icons/phone.png' title='+234908866775544' />
                             <Box>

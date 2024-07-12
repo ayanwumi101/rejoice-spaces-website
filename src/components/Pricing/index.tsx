@@ -19,6 +19,14 @@ const index = () => {
             setPlan('max')
         } else if (plan === 'adventure') {
             setPlan('adventure');
+        }else if(plan === 'luxe'){
+            setPlan('luxe');
+        }else if(plan === 'deluxe'){
+            setPlan('deluxe');
+        }else if(plan === 'prime'){
+            setPlan('prime');
+        }else if(plan === 'supreme'){
+            setPlan('supreme')
         }
   }
 
@@ -78,24 +86,52 @@ const index = () => {
               <Flex gap='24px' alignItems='flex-start' flexWrap='wrap' justifyContent='center'>
                   <PricingCard
                       title='RS Delight'
-                      price={2000}
+                      price={4000}
                       duration='day'
                       onClick={() => purchasePlan('delight')}
-                      features={['Work Area', 'Complimentary coffee/water', 'Unlimited Internet']}
-                  />
-                  <PricingCard
-                      title='RS Max'
-                      duration='6 days'
-                      price={12000}
-                      onClick={() => purchasePlan('max')}
-                      features={['Work Area', 'Complimentary coffee/water', 'Unlimited Internet', 'Complimentary Snack', 'Free to use headset', 'Sticky Note', '15% off printing and photocopy services']}
+                      features={["Access to Workspace",'Power supply', 'Access to Headset', 'Unlimited Internet', "Sticky Note", "Complimentaries", "Access to Games"]}
                   />
                   <PricingCard
                       title='RS Adventure'
-                      price={4000}
-                      duration='day'
+                      price={7000}
+                      duration='Twice in a Week'
                       onClick={() => purchasePlan('adventure')}
-                      features={['Work Area', 'Complimentary coffee/water', 'Unlimited Internet', 'Complimentary Snack', 'Free to use headset']}
+                      features={['Access to Workspace', 'Complimentaries', 'Unlimited Internet', "Sticky Notes", "Power Supply", "Access to Games"]}
+                  />
+                  <PricingCard
+                      title='RS Supreme'
+                      price={11000}
+                      duration='Thrice in a Week'
+                      onClick={() => purchasePlan('supreme')}
+                      features={['Access to Workspace', 'Unlimited Internet', "Sticky Note", "Power Supply", "Access to Games", "Access to Headset", 'Complimentaries', '5% off printing and photocopy services', ]}
+                  />
+                  <PricingCard
+                      title='RS Max'
+                      duration='5 days in a Week'
+                      price={18000}
+                      onClick={() => purchasePlan('max')}
+                      features={['Access to Workspace', 'Complimentaries', 'Unlimited Internet', 'Power Supply', 'Access to headset', 'Sticky Notes', '10% off printing and photocopy services', "Access to games"]}
+                  />
+                  <PricingCard
+                      title='RS Prime'
+                      price={28000}
+                      duration='Twice weekly in a Month'
+                      onClick={() => purchasePlan('prime')}
+                      features={['Access to Workspace', 'Unlimited Internet', "Sticky Note", "Power Supply", "Access to Games", 'Complimentaries', '5% off printing and photocopy services', ]}
+                  />
+                  <PricingCard
+                      title='RS Luxe'
+                      price={42000}
+                      duration='Thrice weekly in a Month'
+                      onClick={() => purchasePlan('luxe')}
+                      features={['Access to Workspace', 'Unlimited Internet', "Sticky Note", "Power Supply", "Access to Headset", "Access to Games", 'Complimentaries', '10% off printing and photocopy services', ]}
+                  />
+                  <PricingCard
+                      title='RS Deluxe'
+                      price={70000}
+                      duration='Five times a week in a Month'
+                      onClick={() => purchasePlan('deluxe')}
+                      features={['Dedicated Workspace', 'Unlimited Internet', "Sticky Note", "Power Supply", "Access to Headset", "Access to Games", 'Complimentaries', '15% off printing and photocopy services', ]}
                   />
               </Flex>
           </Stack>
